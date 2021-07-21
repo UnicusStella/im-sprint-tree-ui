@@ -173,6 +173,14 @@ const menu = [
 const root = document.getElementById('root');
 function createTreeView(menu, currentNode) {
   // TODO: createTreeView 함수를 작성하세요.
+  let root = document.querySelector('#root');
+
+  for (let i = 0; i < menu.length; i++) {
+    let li = document.createElement('li');
+    let input = document.createElement('input');
+    root.append(li);
+    li.append(input);
+  }
 }
 
 createTreeView(menu, root);
