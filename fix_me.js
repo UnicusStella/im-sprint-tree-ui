@@ -173,30 +173,6 @@ const menu = [
 const root = document.getElementById('root');
 function createTreeView(menu, currentNode) {
   // TODO: createTreeView 함수를 작성하세요.
-
-  for (let el of menu) {
-    if (el.type === 'group') {
-      const setLi = document.createElement('li');
-      currentNode.appendChild(setLi);
-
-      console.log(setLi);
-
-      const setInput = document.createElement('input');
-      setInput.type = 'checkbox';
-
-      const setSpan = document.createElement('span');
-      setSpan.textContent = el.name;
-      const setUl = document.createElement('ul');
-
-      setLi.append(setInput, setSpan, setUl);
-
-      createTreeView(el.children, setUl);
-    } else {
-      setLi = document.createElement('li');
-      setLi.textContent = el.name;
-      currentNode.append(setLi);
-    }
-  }
 }
 
 createTreeView(menu, root);
